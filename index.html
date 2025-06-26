@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Music Player</title>
+      <link rel="stylesheet " href="style.css">
+</head>
+
+<body>
+    <div class="music-player">
+        <div class="audio-status">
+
+        </div>
+
+        <div class="album-art" id="albumArt">🎵</div>
+
+        <div class="song-info">
+            <div class="song-title" id="songTitle">Select a Song</div>
+            <div class="artist-name" id="artistName">No Artist</div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <div class="time-info">
+                <span id="currentTime">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="control-btn" id="prevBtn">⏮</button>
+            <button class="control-btn play-btn" id="playBtn">▶</button>
+            <button class="control-btn" id="nextBtn">⏭</button>
+        </div>
+
+        <div class="volume-container">
+            <span>🔊</span>
+            <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="50">
+            <span id="volumeValue">50%</span>
+        </div>
+
+        <div class="autoplay-toggle">
+            <span>Autoplay</span>
+            <div class="toggle-switch" id="autoplayToggle">
+                <div class="toggle-slider"></div>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <div class="tab active" data-tab="playlist">Playlist</div>
+            <div class="tab" data-tab="lyrics">Lyrics</div>
+        </div>
+
+        <div class="tab-content active" id="playlist-tab">
+            <div class="playlist">
+                <div id="playlistContainer"></div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="lyrics-tab">
+            <div class="lyrics-container">
+                <h3>Lyrics</h3>
+                <div class="lyrics-text" id="lyricsText">
+                    <div class="lyrics-line">Select a song to view lyrics</div>
+                </div>
+            </div>
+        </div>
+
+        <audio id="audioPlayer" preload="metadata"></audio>
+    </div>
+
+    <script src="script.js"></script>
+      
+    </script>
+</body>
+
+</html>
